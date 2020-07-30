@@ -60,7 +60,6 @@ h6 { font-size:16px }
 .greeting-wrapper {
     display: grid;
     place-items: center;
-    border: 2px dashed #f08080;
     min-height: 10em;
 }
 
@@ -75,6 +74,7 @@ h6 { font-size:16px }
 
     background-color: var(--secondaryColor);
     border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
 
     -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
@@ -83,17 +83,59 @@ h6 { font-size:16px }
 
 .nav-wrapper {
     grid-area: nav-wrapper;
-    border: 1px dashed #f08080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--borderColor);
+    background-color: var(--mainColor);
+    border-radius: 5px 5px 0 0;
+}
+
+.dots-wrapper {
+    display: flex;
+    padding: 10px;
+}
+
+.browser-dot {
+    background-color: #000;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+#dot-red {
+    background-color: #FC6058;
+}
+
+#dot-amber {
+    background-color: #FEC02F;
+}
+
+#dot-green {
+    background-color: #2ACA3E;
+}
+
+#navigation {
+    margin: 0;
+    padding: 10px;
+}
+
+#navigation li {
+    display: inline-block;
+    margin: 0 5px;
 }
 
 .left-column {
     grid-area: left-column;
-    border: 1px dashed #f08080;
 }
 
 .right-column {
     grid-area: right-column;
-    border: 1px dashed #f08080;
 }
 @media screen and (max-width: 1200px) {
     .main-container {
