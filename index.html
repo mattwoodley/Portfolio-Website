@@ -11,7 +11,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 
-        <link ud="theme-style" rel="stylesheet" type="text/css" href="">
+        <link id="theme-style" rel="stylesheet" type="text/css" href="">
     </head>
     <body>
 
@@ -37,10 +37,10 @@
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
 
                         <div id="theme-option-wrapper">
-                            <div id="light-mode" class="theme-dot"></div>
-                            <div id="blue-mode" class="theme-dot"></div>
-                            <div id="green-mode" class="theme-dot"></div>
-                            <div id="purple-mode" class="theme-dot"></div>
+                            <div data-theme="light" id="theme-light" class="theme-dot"></div>
+                            <div data-theme="blue" id="theme-blue" class="theme-dot"></div>
+                            <div data-theme="green" id="theme-green" class="theme-dot"></div>
+                            <div data-theme="purple" id="theme-purple" class="theme-dot"></div>
                         </div>
 
                         <p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
@@ -162,6 +162,8 @@
                 </form>
             </div>
         </section>
+
+        <script type="text/JavaScript" src="./script.js"></script>
 
     </body>
 
