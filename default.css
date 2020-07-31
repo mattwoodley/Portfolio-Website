@@ -1,13 +1,13 @@
 :root {
-    --mainColor: #eaeaea;
-    --secondaryColor: #fff;
+    --mainColor: #EAEAEA;
+    --secondaryColor: #FFF;
 
-    --borderColor:#c1c1c1;
+    --borderColor:#C1C1C1;
     
     --mainText: #000;
-    --secondaryText: #4b5156;
+    --secondaryText: #4B5156;
 
-    --themeDotBorder: #24292e;
+    --themeDotBorder: #24292E;
 
     --previewBg: rgb(251, 249, 243, 0.8);
     --previewShadow: #F0EAD6;
