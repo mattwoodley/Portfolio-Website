@@ -246,14 +246,28 @@ h6 { font-size:16px }
     padding: 0;
 }
 
-.social-links {
+.social-wrapper {
     display: grid;
     align-content: center;
     text-align: center;
 }
 
+.social-wrapper h4 {
+    margin: 25px 0;
+}
+
 #social_img {
     width: 100%
+}
+
+.social-links {
+    display: grid;
+    gap: 5px;
+}
+
+.social-links h5 {
+    color: #17a2b8;
+    margin: 0;
 }
 
 .post-wrapper {
