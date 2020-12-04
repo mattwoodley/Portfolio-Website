@@ -13,4 +13,7 @@
     --previewShadow: rgb(102, 70, 100);
 
     --buttonColor: rgb(163, 52, 150);
+
+    --carouselIndicator: rgba(255, 255, 255, .4);
+    --carouselIndicatorCurrent: rgba(255, 255, 255, .8);
 }

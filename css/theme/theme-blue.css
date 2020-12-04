@@ -13,4 +13,7 @@
     --previewShadow: #111921;
 
     --buttonColor: #17A2B8;
+
+    --carouselIndicator: rgba(255, 255, 255, .4);
+    --carouselIndicatorCurrent: rgba(255, 255, 255, .8);
 }

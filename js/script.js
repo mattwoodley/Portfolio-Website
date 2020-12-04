@@ -1,14 +1,12 @@
 const themeDots = document.getElementsByClassName('theme-dot');
 const leftColumn = document.querySelector('.left-column');
 const currentTheme = localStorage.getItem('theme');
-
+console.log(currentTheme);
 setTheme = (theme) => {
     if (theme === 'light') {
         document.getElementById("theme-style").href = '../css/default.css'
     } else if (theme === 'blue') {
         document.getElementById("theme-style").href = '../css/theme/theme-blue.css'
-    } else if (theme === 'green') {
-        document.getElementById("theme-style").href = '../css/theme/theme-green.css'
     } else if (theme === 'pink') {
         document.getElementById("theme-style").href = '../css/theme/theme-pink.css'
     }

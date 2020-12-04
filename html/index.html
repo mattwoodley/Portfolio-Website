@@ -2,19 +2,26 @@
 <html>
     <head>
         <title>Matthew Woodley</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="stylesheet" type="text/css" href="../css/default.css">
-
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
-
         <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
         <link id="theme-style" rel="stylesheet" type="text/css" href="">
     </head>
+    <header>
+
+            <nav class="nav">
+                <ul class="nav__bar">
+                    <li class="nav__item"><a href="./index.html">Home</a></li>
+                    <li class="nav__item"><a href="#about">About</a></li>
+                    <li class="nav__item"><a href="#projects">Projects</a></li>
+                    <li class="nav__item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+    </header>
+
     <body>
 
         <section class="s1">
@@ -24,16 +31,6 @@
                 </div>
 
                 <div class="intro-wrapper">
-                    <div class="nav-wrapper">
-                        <div class="dots-wrapper">
-                            <div id="dot-red" class="browser-dot"></div>
-                            <div id="dot-amber" class="browser-dot"></div>
-                            <div id="dot-green" class="browser-dot"></div>
-                        </div>
-                        <nav id="navigation">
-                            <a href="#contact-form">Contact</a>
-                        </nav>
-                    </div>
                     <div class="left-column">
                         <img id="profile_pic" src="../img/nature.png">
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
@@ -57,7 +54,7 @@
             </div>
         </section>
 
-        <section class="s2">
+        <section id="about" class="s2">
             <div class="main-container">
                 <div class="about-wrapper">
                     <div class="about-me">
@@ -91,7 +88,7 @@
                     </div>
 
                     <div class="social-wrapper">
-                        <img id="social_img" src="../img/pupper.png">
+                        <img id="social-img" src="../img/pupper-1.png">
                         <h4>Find me on GitHub and LinkedIn</h4>
                         <div class="social-links">
                             <a id="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
@@ -102,39 +99,39 @@
             </div>
         </section>
 
-        <section class="s1">
+        <section id="projects" class="s1">
             <div class="main-container">
                 <h3 style="text-align: center;">Some of my past projects</h3>
 
-                <div class="post-wrapper">
+                <div id="projects-wrapper" class="project-wrapper">
 
                     <div>
-                        <div class="post">
+                        <div class="project">
                             <img class="thumbnail" src="../img/to-do-list-thumbnail.png">
-                            <div class="post-preview">
-                                <h6 class="post-title">To Do List</h6>
-                                <p class="post-intro">I benefit greatly from maintaining a list, so the idea of creating my own app naturally came about...</p>
-                                <a href="post-1.html">Read More</a>
+                            <div class="project-preview">
+                                <h6 class="project-title">To Do List</h6>
+                                <p class="project-intro">I benefit greatly from maintaining a list, so the idea of creating my own app naturally came about...</p>
+                                <a href="project-1.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="post">
-                            <img class="thumbnail" src="../img/pupper 3.png">
-                            <div class="post-preview">
-                                <h6 class="post-title">Post Title</h6>
-                                <p class="post-intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. Some more text. </p>
-                                <a href="post-2.html">Read More</a>
+                        <div class="project">
+                            <img class="thumbnail" src="../img/pupper-3.png">
+                            <div class="project-preview">
+                                <h6 class="project-title">project Title</h6>
+                                <p class="project-intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. Some more text. </p>
+                                <a href="project-2.html">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div class="post">
-                            <img class="thumbnail" src="../img/pupper 4.png">
-                            <div class="post-preview">
-                                <h6 class="post-title">Post Title</h6>
-                                <p class="post-intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. </p>
-                                <a href="post-3.html">Read More</a>
+                        <div class="project">
+                            <img class="thumbnail" src="../img/pupper-4.png">
+                            <div class="project-preview">
+                                <h6 class="project-title">project Title</h6>
+                                <p class="project-intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. </p>
+                                <a href="project-3.html">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -142,7 +139,7 @@
             </div>
         </section>
 
-        <section class="s2">
+        <section id="contact" class="s2">
             <div class="main-container">
                 <h3 style="text-align: center;">Get In Touch</h3>
 
@@ -164,7 +161,7 @@
             </div>
         </section>
 
-        <script type="text/JavaScript" src="../js/script.js"></script>
+        <script src="../js/script.js"></script>
 
     </body>
 
