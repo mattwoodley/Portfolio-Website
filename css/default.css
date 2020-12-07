@@ -1,3 +1,5 @@
+/* Core styles */
+
 :root {
     --mainColor: #EAEAEA;
     --secondaryColor: #FFF;
@@ -27,7 +29,7 @@ html {
 
 body {
     padding: 0;
-    margin-top: 8rem;
+    margin-top: 5rem;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
@@ -65,6 +67,36 @@ h5 { font-size:2.0rem }
 h6 { font-size:1.6rem }
 a, p, li, span, label, input, textarea { font-size: 1.6rem }
 
+/* Div styles */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5rem;
+    background-color: rgb(209, 209, 209);
+}
+
+.nav__bar {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+}
+
+.nav__item a {
+    position: relative;
+    color: var(--mainText);
+    font-size: 20px;
+}
+
 .s1 {
     background-color: var(--mainColor);
     border-bottom: 0.1rem solid var(--borderColor);
@@ -88,12 +120,12 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     min-height: 16rem;
 }
 
-.intro-wrapper {
+.intro__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         'nav-wrapper nav-wrapper'
-        'left-column right-column'
+        'left__column right__column'
     ;
 
     background-color: var(--secondaryColor);
@@ -106,12 +138,12 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
 }
 
-.left-column {
-    grid-area: left-column;
+.left__column {
+    grid-area: left__column;
     padding: 5rem 0;
 }
 
-#profile_pic {
+#profile__pic {
     display: block;
     margin: 0 auto;
 
@@ -121,12 +153,12 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     border: 0.2rem solid var(--borderColor);
 }
 
-#theme-option-wrapper {
+#theme__option-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.theme-dot {
+.theme__dot {
     height: 3.0rem;
     width: 3.0rem;
     background-color: #000;
@@ -142,23 +174,23 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     cursor: pointer;
 }
 
-.theme-dot:hover {
+.theme__dot:hover {
     border-width: 0.5rem;
 }
 
-#theme-light {
+#theme__light {
     background-color: #fff;
 }
 
-#theme-blue {
+#theme__blue {
     background-color: #263c50;
 }
 
-#theme-pink {
+#theme__pink {
     background-color: rgb(135, 63, 136);
 }
 
-#settings-note {
+#settings__note {
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
@@ -166,14 +198,14 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     text-align: center;
 }
 
-.right-column {
-    grid-area: right-column;
+.right__column {
+    grid-area: right__column;
     display: grid;
     align-content: center;
     padding: 5rem 0;
 }
 
-#preview-shadow {
+#preview__shadow {
     background-color: var(--previewShadow);
     width: 30rem;
     height: 18rem;
@@ -188,7 +220,7 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     padding: 1.5rem;
 }
 
-.about-wrapper {
+.about__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     padding: 5rem 0;
@@ -205,31 +237,31 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     padding: 0;
 }
 
-.social-wrapper {
+.social__wrapper {
     display: grid;
     align-content: center;
     text-align: center;
 }
 
-.social-wrapper h4 {
+.social__wrapper h4 {
     margin: 2.5rem 0;
 }
 
-#social-img {
+#social__img {
     width: 100%;
 }
 
-.social-links {
+.social__links {
     display: grid;
     gap: 0.5rem;
 }
 
-.social-links h5 {
+.social__links h5 {
     color: #1ab9d1;
     margin: 0;
 }
 
-.social-wrapper-footer {
+.social__wrapper-footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
@@ -241,20 +273,20 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     padding: 2rem 0;
 }
 
-.social-wrapper-footer h4 {
+.social__wrapper-footer h4 {
     grid-area: header;
     align-self: end;
     margin: 0;
 }
 
-#social-img-footer {
+#social__img-footer {
     grid-area: image;
     grid-column: 1/2;
     grid-row: 1/3;
     width: 100%;
 }
 
-.social-links-footer {
+.social__links-footer {
     grid-area: links;
     display: flex;
     justify-content: center;
@@ -262,12 +294,12 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     gap: 1.5rem;
 }
 
-.social-links-footer h5 {
+.social__links-footer h5 {
     color: #1ab9d1;
     margin: 0;
 }
 
-.project-wrapper {
+.project__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 32rem);
     gap: 2rem;
@@ -289,22 +321,22 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     object-fit: cover;
 }
 
-.project-preview {
+.project__preview {
     background-color: #fff;
     padding: 1.5rem;
 }
 
-.project-title {
+.project__title {
     color: #000;
     margin: 0;
 }
 
-.project-intro {
+.project__intro {
     color: #4B5156;
     font-size: 1.4rem;
 }
 
-#contact-form {
+#contact__form {
     cursor: pointer;
     display: block;
     max-width: 60rem;
@@ -316,16 +348,16 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     margin-bottom: 5rem;
 }
 
-#contact-form label {
+#contact__form label {
     line-height: 4.3rem;
 }
 
-#contact-form textarea {
+#contact__form textarea {
     min-height: 10rem;
     font-size: 1.4rem;
 }
 
-.input-field {
+.input__field {
     width: 100%;
     padding: 1rem 0;
     background-color: var(--secondaryColor);
@@ -334,7 +366,7 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     font-size: 1.4rem;
 }
 
-#submit-btn {
+#submit__btn {
     width:100%;
     margin-top: 1rem;
     padding: 1rem 0;
@@ -350,16 +382,16 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
 }
 
 @media screen and (max-width: 800px) {
-    .intro-wrapper {
+    .intro__wrapper {
         grid-template-columns: 1fr;
         grid-template-areas: 
             'nav-wrapper'
-            'left-column'
-            'right-column'
+            'left__column'
+            'right__column'
         ;
     }
 
-    .right-column {
+    .right__column {
         justify-content: center;
     }
 }

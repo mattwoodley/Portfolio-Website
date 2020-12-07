@@ -1,7 +1,7 @@
-const themeDots = document.getElementsByClassName('theme-dot');
-const leftColumn = document.querySelector('.left-column');
+const themeDots = document.getElementsByClassName('theme__dot');
+const leftColumn = document.querySelector('.left__column');
 const currentTheme = localStorage.getItem('theme');
-console.log(currentTheme);
+
 setTheme = (theme) => {
     if (theme === 'light') {
         document.getElementById("theme-style").href = '../css/default.css'

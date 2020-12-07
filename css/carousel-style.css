@@ -103,16 +103,16 @@
 }
 
 @media screen and (max-width: 800px) {
-    .intro-wrapper {
+    .intro__wrapper {
         grid-template-columns: 1fr;
         grid-template-areas: 
             'nav-wrapper'
-            'left-column'
-            'right-column'
+            'left__column'
+            'right__column'
         ;
     }
 
-    .right-column {
+    .right__column {
         justify-content: center;
     }
 }
