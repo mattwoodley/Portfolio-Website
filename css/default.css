@@ -5,6 +5,7 @@
     --secondaryColor: #FFF;
 
     --navColor: #d1d1d1;
+    --navHighlight:  rgba(255, 255, 255, 0.2);
 
     --borderColor:#C1C1C1;
     
@@ -26,6 +27,7 @@ html {
     font-size: 10px;
     padding: 0;
     margin: 0;
+    scroll-padding-top: 5rem; /* height of sticky header */
     scroll-behavior: smooth;
 }
 
@@ -67,14 +69,13 @@ h3 { font-size:2.8rem }
 h4 { font-size:2.4rem }
 h5 { font-size:2.0rem }
 h6 { font-size:1.6rem }
-a, p, li, span, label, input, textarea { font-size: 1.6rem }
+a, p, li, span, label, input, textarea { font-size: 1.5rem }
 
 /* Div styles */
 
 .nav {
     position: fixed;
-    /* z-index: 2 to keep navbar above .carousel__image + .carousel__button--left */
-    z-index: 2;
+    z-index: 2; /* z-index: 2 to keep navbar above .carousel__image + .carousel__button--left */
     top: 0;
     left: 0;
     width: 100%;
@@ -87,18 +88,22 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
 
 .nav__bar {
     position: relative;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    margin: 0;
+    padding: 1.2rem 0;
     width: 100%;
 }
 
 .nav__item a {
     position: relative;
-    color: var(--mainText);
+    padding: 1.2rem 2rem;
     font-size: 20px;
+    color: var(--mainText);
+}
+
+.nav__item a:hover {
+    background-color: var(--navHighlight);
 }
 
 .section {
@@ -268,44 +273,6 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
     margin: 0;
 }
 
-.social__wrapper--footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "image header header"
-        "image links links";
-    align-content: center;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.social__wrapper--footer h4 {
-    grid-area: header;
-    align-self: end;
-    margin: 0;
-}
-
-.social__img--footer {
-    grid-area: image;
-    grid-column: 1/2;
-    grid-row: 1/3;
-    width: 100%;
-}
-
-.social__links--footer {
-    grid-area: links;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    gap: 1.5rem;
-}
-
-.social__links--footer h5 {
-    color: #1ab9d1;
-    margin: 0;
-}
-
 .project__wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, 32rem);
@@ -344,7 +311,6 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
 }
 
 .contact__form {
-    cursor: pointer;
     display: block;
     max-width: 60rem;
     margin: 0 auto;
@@ -374,12 +340,55 @@ a, p, li, span, label, input, textarea { font-size: 1.6rem }
 }
 
 .submit__btn {
+    cursor: pointer;
     width:100%;
     margin-top: 1rem;
     padding: 1rem 0;
     color: #fff;
     background-color: var(--buttonColor);
     border: none;
+}
+
+.submit__btn:hover {
+    background-color: var(--buttonColor);
+}
+
+.social__wrapper--footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "image header header"
+        "image links links";
+    align-content: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social__wrapper--footer h4 {
+    grid-area: header;
+    align-self: end;
+    margin: 0;
+}
+
+.social__img--footer {
+    grid-area: image;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 100%;
+}
+
+.social__links--footer {
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 1.5rem;
+}
+
+.social__links--footer h5 {
+    color: #1ab9d1;
+    margin: 0;
 }
 
 @media screen and (max-width: 1200px) {
