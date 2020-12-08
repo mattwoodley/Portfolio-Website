@@ -1,14 +1,14 @@
-const themeDots = document.getElementsByClassName('theme__dot');
-const leftColumn = document.querySelector('.left__column');
+const themes = document.getElementsByClassName('theme');
+const leftColumn = document.querySelector('.intro__col--left');
 const currentTheme = localStorage.getItem('theme');
 
 setTheme = (theme) => {
     if (theme === 'light') {
-        document.getElementById("theme-style").href = '../css/default.css'
+        document.getElementsByClassName("theme--style")[0].href = '../css/default.css'
     } else if (theme === 'blue') {
-        document.getElementById("theme-style").href = '../css/theme/theme-blue.css'
+        document.getElementsByClassName("theme--style")[0].href = '../css/theme/theme-blue.css'
     } else if (theme === 'pink') {
-        document.getElementById("theme-style").href = '../css/theme/theme-pink.css'
+        document.getElementsByClassName("theme--style")[0].href = '../css/theme/theme-pink.css'
     }
     
     localStorage.setItem('theme', theme);
@@ -20,12 +20,12 @@ if (currentTheme === null) {
     setTheme(currentTheme);
 }
 
-for (let i=0; themeDots.length > i; i++){
-    themeDots[i].addEventListener('click', () => {
-        let theme = themeDots[i].dataset.theme;
+for (let i=0; themes.length > i; i++){
+    themes[i].addEventListener('click', () => {
+        let theme = themes[i].dataset.theme;
         const localStorageTheme = localStorage.getItem('theme');
         
-        if (themeDots[i].dataset.theme === localStorageTheme) {
+        if (themes[i].dataset.theme === localStorageTheme) {
             return;
         } else {
             setTheme(theme);
@@ -40,8 +40,8 @@ themeConfirmation = () => {
         return;
     } else {
         const themeConfirmation = document.createElement('p');
-        themeConfirmation.textContent = "*Theme settings will be saved for your next visit";
-        themeConfirmation.setAttribute("id", "settings-note");
+        themeConfirmation.textContent = "*Theme will be saved for your next visit";
+        themeConfirmation.setAttribute("class", "intro__save");
         leftColumn.appendChild(themeConfirmation);
         window.setTimeout(() => themeConfirmation.remove(), 4000);
     }

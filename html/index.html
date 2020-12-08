@@ -8,11 +8,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="../css/default.css">
-        <link id="theme__style" rel="stylesheet" type="text/css" href="">
+        <link class="theme--style" rel="stylesheet" type="text/css" href="">
     </head>
+    
     <header>
 
-            <nav>
+            <nav class="nav">
                 <ul class="nav__bar">
                     <li class="nav__item"><a href="./index.html">Home</a></li>
                     <li class="nav__item"><a href="#about">About</a></li>
@@ -25,27 +26,27 @@
 
     <body>
 
-        <section class="s1">
-            <div class="main-container">
-                <div class="greeting-wrapper">
+        <section class="section section--grey">
+            <div class="main">
+                <div class="greeting">
                     <h1>Hi, I'm Matthew Woodley</h1>
                 </div>
 
-                <div class="intro__wrapper">
-                    <div class="left__column">
-                        <img id="profile__pic" src="../img/nature.png">
+                <div class="intro">
+                    <div class="intro__col intro__col--left">
+                        <img class="intro__image" src="../img/nature.png">
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
 
-                        <div id="theme__option-wrapper">
-                            <div data-theme="light" id="theme__light" class="theme__dot"></div>
-                            <div data-theme="blue" id="theme__blue" class="theme__dot"></div>
-                            <div data-theme="pink" id="theme__pink" class="theme__dot"></div>
+                        <div class="intro__theme-option">
+                            <div data-theme="light" class="theme theme--light"></div>
+                            <div data-theme="blue" class="theme theme--blue"></div>
+                            <div data-theme="pink" class="theme theme--pink"></div>
                         </div>
 
                     </div>
-                    <div class="right__column">
-                        <div id="preview__shadow">
-                            <div id="preview">
+                    <div class="intro__col intro__col--right">
+                        <div class="preview__shadow">
+                            <div class="preview">
                                 <h3>What I do</h3>
                                 <p>I was a self-employed Voice Actor, now I'm making my first move into the programming industry.</p>
                             </div>
@@ -55,8 +56,8 @@
             </div>
         </section>
 
-        <section id="about" class="s2">
-            <div class="main-container">
+        <section id="about" class="section section--white">
+            <div class="main">
                 <div class="about__wrapper">
                     <div class="about__me">
                         <h4>More about me</h4>
@@ -71,7 +72,7 @@
 
                         <p>Fullstack developer with primary focus on JavaScript, HTML + CSS: <a target="_blank" href="../img/Matthew_Woodley_CV.pdf">Open CV</a></p>
 
-                        <div id="skills">
+                        <div class="skills">
                             <ul>
                                 <li>JavaScript</li>
                                 <li>Java</li>
@@ -89,22 +90,22 @@
                     </div>
 
                     <div class="social__wrapper">
-                        <img id="social__img" src="../img/pupper-1.png">
+                        <img class="social__img" src="../img/pupper-1.png">
                         <h4>Find me on GitHub and LinkedIn</h4>
                         <div class="social__links">
-                            <a id="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
-                            <a id="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i></a> LinkedIn</h5></a>
+                            <a class="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
+                            <a class="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i></a> LinkedIn</h5></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="s1">
-            <div class="main-container">
+        <section id="projects" class="section section--grey">
+            <div class="main">
                 <h3 style="text-align: center;">Some of my past projects</h3>
 
-                <div id="projects__wrapper" class="project__wrapper">
+                <div class="project__wrapper">
 
                     <div>
                         <div class="project">
@@ -140,11 +141,11 @@
             </div>
         </section>
 
-        <section id="contact" class="s2">
-            <div class="main-container">
+        <section id="contact" class="section section--white">
+            <div class="main">
                 <h3 style="text-align: center;">Get In Touch</h3>
 
-                <form id="contact__form" method="POST" action="https://formspree.io/m17woodley@gmail.com">
+                <form class="contact__form" method="POST" action="https://formspree.io/m17woodley@gmail.com">
                     <label>Name</label>
                     <input class="input__field" type="text" name="name">
 
@@ -157,7 +158,7 @@
                     <label>Message</label>
                     <textarea class="input__field" name="message"></textarea>
 
-                    <input id="submit__btn" type="submit" value="Send">
+                    <input class="submit__btn" type="submit" value="Send">
                 </form>
             </div>
         </section>

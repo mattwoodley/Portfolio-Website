@@ -97,22 +97,22 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .main-container {
+    .main {
         width: 95%;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .intro__wrapper {
+    .intro {
         grid-template-columns: 1fr;
         grid-template-areas: 
             'nav-wrapper'
-            'left__column'
-            'right__column'
+            'intro__col--left'
+            'intro__col--right'
         ;
     }
 
-    .right__column {
+    .intro__col--right {
         justify-content: center;
     }
 }

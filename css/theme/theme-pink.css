@@ -1,8 +1,10 @@
 :root {
-    --mainColor: rgb(114, 62, 107);
-    --secondaryColor: rgb(102, 52, 97);
+    --mainColor: #723e6b;
+    --secondaryColor: #663461;
 
-    --borderColor:rgb(32, 21, 32);
+    --navColor: #8a4a81;
+
+    --borderColor: #201520;
     
     --mainText: #FFF;
     --secondaryText: #EEE;
@@ -12,7 +14,7 @@
     --previewBg: rgba(83, 54, 80, 0.8);
     --previewShadow: rgb(102, 70, 100);
 
-    --buttonColor: rgb(163, 52, 150);
+    --buttonColor: #a33496;
 
     --carouselIndicator: rgba(255, 255, 255, .4);
     --carouselIndicatorCurrent: rgba(255, 255, 255, .8);
