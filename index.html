@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="stylesheet" type="text/css" href="./css/default.css">
         <link class="theme--style" rel="stylesheet" type="text/css" href="">
     </head>
     
@@ -26,7 +26,7 @@
 
     <body>
 
-        <section class="section section--grey">
+        <section class="section section--mainColor">
             <div class="main">
                 <div id="greeting" class="greeting">
                     <h1>Hi, I'm Matthew Woodley</h1>
@@ -34,7 +34,7 @@
 
                 <div class="intro">
                     <div class="intro__col intro__col--left">
-                        <img class="intro__image" src="../img/nature.png">
+                        <img class="intro__image" src="./img/nature.png">
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
 
                         <div class="intro__theme-option">
@@ -47,8 +47,8 @@
                     <div class="intro__col intro__col--right">
                         <div class="preview__shadow">
                             <div class="preview">
-                                <h3>What I do</h3>
-                                <p>I was a self-employed Voice Actor, now I'm making my first move into the programming industry.</p>
+                                <h3>Who I am</h3>
+                                <p>I'm a Voice Actor turned Web Developer, looking to continue developing my skills at an exciting company.</p>
                             </div>
                         </div>
                     </div>
@@ -56,11 +56,11 @@
             </div>
         </section>
 
-        <section id="about" class="section section--white">
+        <section id="about" class="section section--secondaryColor">
             <div class="main">
-                <div class="about__wrapper">
+                <div class="about">
                     <div class="about__me">
-                        <h4>More about me</h4>
+                        <h4 class="about__title">About me</h4>
 
                         <p>elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc mattis</p>
 
@@ -68,11 +68,11 @@
                     
                         <hr>
 
-                        <h4>Technical Experience</h4>
+                        <h4 class="about__title">Technical Experience</h4>
 
-                        <p>Fullstack developer with primary focus on JavaScript, HTML + CSS: <a target="_blank" href="../img/Matthew_Woodley_CV.pdf">Open CV</a></p>
+                        <p>Fullstack developer with primary focus on JavaScript, HTML + CSS: <a target="_blank" href="./img/Matthew_Woodley_CV.pdf">Open CV</a></p>
 
-                        <div class="skills">
+                        <div class="about__skills">
                             <ul>
                                 <li>JavaScript</li>
                                 <li>Java</li>
@@ -89,81 +89,77 @@
 
                     </div>
 
-                    <div class="social__wrapper">
-                        <img class="social__img" src="../img/pupper-1.png">
+                    <div class="about__social">
+                        <img class="about__img" src="./img/pupper-1.png">
                         <h4>Find me on GitHub and LinkedIn</h4>
-                        <div class="social__links">
+                        <div class="about__links">
                             <a class="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
-                            <a class="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i></a> LinkedIn</h5></a>
+                            <a class="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i> LinkedIn</h5></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section section--grey">
+        <section id="projects" class="section section--mainColor">
             <div class="main">
-                <h3 style="text-align: center;">Some of my past projects</h3>
-
-                <div class="project__wrapper">
-
-                    <div>
-                        <div class="project">
-                            <img class="thumbnail" src="../img/to-do-list-thumbnail.png">
-                            <div class="project__preview">
-                                <h6 class="project__title">To Do List</h6>
-                                <p class="project__intro">I benefit greatly from maintaining a list, so the idea of creating my own app naturally came about...</p>
-                                <a href="project-1.html">Read More</a>
+                
+                <div class="projects">
+                    
+                    <h3 class="projects__header">Some of my past projects</h3>
+                    <div class="projects__project">
+                        <a href="project-1.html">
+                            <img class="projects__thumbnail" src="./img/to-do-list-thumbnail.png">
+                            <div class="projects__preview">
+                                <h6 class="projects__title">To Do List</h6>
+                                <p class="projects__intro">I benefit greatly from maintaining a list, so the idea of creating my own app naturally came about...</p>
+                                <p class="projects__link">Read More</p>
                             </div>
+                        </a>
+                    </div>
+                    <div class="projects__project">
+                        <img class="projects__thumbnail" src="./img/pupper-3.png">
+                        <div class="projects__preview">
+                            <h6 class="projects__title">project Title</h6>
+                            <p class="projects__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. Some more text. </p>
+                            <p class="projects__link">Read More</p>
                         </div>
                     </div>
-                    <div>
-                        <div class="project">
-                            <img class="thumbnail" src="../img/pupper-3.png">
-                            <div class="project__preview">
-                                <h6 class="project__title">project Title</h6>
-                                <p class="project__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. Some more text. </p>
-                                <a href="project-2.html">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project">
-                            <img class="thumbnail" src="../img/pupper-4.png">
-                            <div class="project__preview">
-                                <h6 class="project__title">project Title</h6>
-                                <p class="project__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. </p>
-                                <a href="project-3.html">Read More</a>
-                            </div>
+                    <div class="projects__project">
+                        <img class="projects__thumbnail" src="./img/pupper-4.png">
+                        <div class="projects__preview">
+                            <h6 class="projects__title">project Title</h6>
+                            <p class="projects__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. </p>
+                            <p class="projects__link">Read More</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section section--white">
+        <section id="contact" class="section section--secondaryColor">
             <div class="main">
                 <h3 style="text-align: center;">Get In Touch</h3>
 
                 <form class="contact__form" method="POST" action="https://formspree.io/m17woodley@gmail.com">
                     <label>Name</label>
-                    <input class="input__field" type="text" name="name">
+                    <input class="contact__input" type="text" name="name">
 
                     <label>Subject</label>
-                    <input class="input__field" type="text" name="subject">
+                    <input class="contact__input" type="text" name="subject">
 
                     <label>Email</label>
-                    <input class="input__field" type="email" name="email">
+                    <input class="contact__input" type="email" name="email">
 
                     <label>Message</label>
-                    <textarea class="input__field" name="message"></textarea>
+                    <textarea class="contact__input" name="message"></textarea>
 
-                    <input class="submit__btn" type="submit" value="Send">
+                    <input class="contact__btn" type="submit" value="Send">
                 </form>
             </div>
         </section>
 
-        <script src="../js/script.js"></script>
+        <script src="./js/script.js"></script>
 
     </body>
 

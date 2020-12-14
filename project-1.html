@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../css/default.css">
-        <link rel="stylesheet" href="../css/carousel-style.css">
+        <link rel="stylesheet" type="text/css" href="./css/default.css">
+        <link rel="stylesheet" href="./css/carousel-style.css">
         <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
         <link class="theme--style" rel="stylesheet" type="text/css" href="">
     </head>
@@ -16,8 +16,7 @@
         <nav class="nav">
             <ul class="nav__bar">
                 <li class="nav__item"><a href="./index.html">Home</a></li>
-                <li class="nav__item"><a href="./index.html#about">About</a></li>
-                <li class="nav__item"><a href="./index.html#projects">Projects</a></li>
+                <li class="nav__item"><a href="./project-1.html#project">Project</a></li>
                 <li class="nav__item"><a href="./index.html#contact">Contact</a></li>
             </ul>
         </nav>
@@ -25,7 +24,7 @@
     </header>
 
     <body>
-        <section class="section section--grey">
+        <section class="section section--mainColor">
             <div class="main">
                 <div class="greeting">
                     <h1>To-Do List</h1>
@@ -33,7 +32,7 @@
 
                 <div class="intro">
                     <div class="intro__col intro__col--left">
-                        <img class="intro__image" src="../img/nature.png">
+                        <img class="intro__image" src="./img/nature.png">
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
                         
                         <div class="intro__theme-option">
@@ -44,16 +43,17 @@
 
                     </div>
                     <div class="intro__col--right">
-                        <h2 style="text-align: center";>Technologies:<br>JavaScript, HTML, CSS</h2>
+                        <h2 class="intro__header">Technologies</h2>
+                        <h3 class="intro__description">JavaScript, HTML, CSS</h3>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section section--white">
+        <section class="section section--secondaryColor">
             <div class="main">
-                <div class="carousel__container">
+                <div id="project" class="carousel__container">
 
-                    <button class="carousel__button carousel__button--left">
+                    <button class="carousel__button carousel__button--left is-hidden">
                         <i class="fas fa-angle-left"></i>
                     </button>
             
@@ -62,17 +62,17 @@
             
                             <li class="carousel__slide current-slide">
                                 <p class="carousel__caption">This is a bit about this app This is a bit about this app This is a bit about this app This is a bit about this app This is a bit about this app </p>
-                                <img class="carousel__image" src="../img/pupper-2.png" alt="____">
+                                <img class="carousel__image" src="./img/pupper-2.png" alt="____">
                             </li>
             
                             <li class="carousel__slide">
                                 <p class="carousel__caption">This is a bit about this app</p>
-                                <img class="carousel__image" src="../img/pupper-3.png" alt="____">
+                                <img class="carousel__image" src="./img/pupper-3.png" alt="____">
                             </li>
             
                             <li class="carousel__slide">
                                 <p class="carousel__caption">This is a bit about this app</p>
-                                <img class="carousel__image" src="../img/pupper-4.png" alt="____">
+                                <img class="carousel__image" src="./img/pupper-4.png" alt="____">
                             </li>
             
                         </ul>
@@ -91,20 +91,20 @@
                 </div>
             </div>
         </section>
-        <section class="section section--grey">
+        <section class="section section--mainColor">
             <div class="main">
-                <div class="social__wrapper--footer">
-                    <img class="social__img--footer" src="../img/pupper-1.png">
+                <div class="about__social--footer">
+                    <img class="about__img--footer" src="./img/pupper-1.png">
                     <h4>Find me on GitHub and LinkedIn</h4>
-                    <div class="social__links--footer">
+                    <div class="about__links--footer">
                         <a class="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
-                        <a class="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i></a> LinkedIn</h5></a>
+                        <a class="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i> LinkedIn</h5></a>
                     </div>
                 </div>
             </div>
         </section>
-        <script src="../js/script.js"></script>
-        <script src="../js/carousel.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/carousel.js"></script>
     </body>
 
 </html>
