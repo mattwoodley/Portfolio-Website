@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="./css/default.css">
+        <link rel="stylesheet" type="text/css" href="./css/nav-menu.css">
         <link class="theme--style" rel="stylesheet" type="text/css" href="">
     </head>
     
@@ -15,11 +16,14 @@
 
             <nav class="nav">
                 <ul class="nav__bar">
-                    <li class="nav__item"><a href="#greeting">Home</a></li>
-                    <li class="nav__item"><a href="#about">About</a></li>
-                    <li class="nav__item"><a href="#projects">Projects</a></li>
-                    <li class="nav__item"><a href="#contact">Contact</a></li>
+                    <a class="nav__item" href="#greeting"><li>Home</li></a>
+                    <a class="nav__item" href="#about"><li>About</li></a>
+                    <a class="nav__item" href="#projects"><li>Projects</li></a>
+                    <a class="nav__item" href="#contact"><li>Contact</li></a>
                 </ul>
+                <div class="nav__menu">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
 
     </header>
@@ -34,7 +38,7 @@
 
                 <div class="intro">
                     <div class="intro__col intro__col--left">
-                        <img class="intro__image" src="./img/nature.png">
+                        <img class="intro__image" src="./img/profile-picture.jpg" alt="Profile picture of Matthew stood in front of a giant Christmas tree">
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
 
                         <div class="intro__theme-option">
@@ -61,11 +65,12 @@
                 <div class="about">
                     <div class="about__me">
                         <h4 class="about__title">About me</h4>
+                        <p>I first got into programming when a developer-friend  introduced me to it as I was looking to change careers. He showed me the ropes and I immediately found my passion.</p>
 
-                        <p>elementum nibh tellus molestie nunc non blandit massa enim nec dui nunc mattis</p>
-
-                        <p>eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique nulla</p>
-                    
+                        <p>Since then I've been educating myself through a coding bootcamp, online courses, personal projects and creating this very website!</p>
+                        
+                        <p>In the future I want to work for a well reputed company which can allow me to continue my learning whilst creating meaningful applications.</p>
+                        
                         <hr>
 
                         <h4 class="about__title">Technical Experience</h4>
@@ -90,7 +95,7 @@
                     </div>
 
                     <div class="about__social">
-                        <img class="about__img" src="./img/pupper-1.png">
+                        <img class="about__img" src="./img/working.jpg" alt="Matthew sat at his home PC working on a project">
                         <h4>Find me on GitHub and LinkedIn</h4>
                         <div class="about__links">
                             <a class="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
@@ -108,7 +113,7 @@
                     
                     <h3 class="projects__header">Some of my past projects</h3>
                     <div class="projects__project">
-                        <a href="project-1.html">
+                        <a href="to-do-list.html">
                             <img class="projects__thumbnail" src="./img/to-do-list-thumbnail.png">
                             <div class="projects__preview">
                                 <h6 class="projects__title">To Do List</h6>
@@ -158,6 +163,10 @@
                 </form>
             </div>
         </section>
+
+        <div class="back-to-top">
+            <i class="fas fa-angle-up"></i>
+        </div>
 
         <script src="./js/script.js"></script>
 

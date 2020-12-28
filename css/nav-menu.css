@@ -1,0 +1,136 @@
+.nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 5rem;
+    z-index: 2;
+    background: var(--navColor);
+    transition: all 0.3s ease;
+}
+
+.nav__bar {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    box-sizing: border-box;
+    min-height: 5rem;
+}
+
+.nav__item li {
+    font-size: 2rem;
+}
+
+.nav__item a, .nav__menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--mainText);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav__item:hover, .nav__menu:hover {
+    background-color: var(--navHighlight);
+}
+
+/* nav__menu styling */
+
+.back-to-top {
+    position: fixed;
+    height: 4.5rem;
+    width: 4.2rem;
+    background: var(--navColor);
+    right: 3rem;
+    bottom: 1rem;
+    text-align: center;
+    line-height: 4.5rem;
+    color: var(--mainText);
+    z-index: 3;
+    font-size: 3rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border: 0.1rem solid var(--borderColor);
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+.back-to-top.show {
+    bottom: 3rem;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top i {
+    line-height: 4.5rem;
+}
+
+.nav__item, .nav__menu {
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.nav__menu i {
+    display: none;
+}
+
+/* responsive media query start */
+@media (max-width: 800px) {
+
+    .nav {
+        justify-content: end;
+    }
+
+    .nav__bar {
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: var(--navColor);
+        text-align: center;
+        padding-top: 8rem;
+        padding-left: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .nav__bar.active {
+        left: 0;
+    }
+    
+    .nav__menu i {
+        font-size: 3rem;
+        display: block;
+        color: var(--mainText);
+        margin-right: 2rem;
+    }
+
+    .nav__item, .nav__menu {
+        display: block;
+        z-index: 3;
+    }
+    
+    .nav__item li {
+        font-size: 4rem;
+    }
+    .nav__item:hover, .nav__menu:hover {
+        background-color: transparent;
+    }
+
+
+    /* \f00d is the 'X' fontAwesome icon */
+    .nav__menu i.active:before {
+        content: "\f00d"; 
+    }
+}
