@@ -1,7 +1,7 @@
 .nav {
     position: fixed;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 50rem 60rem 1fr;
     align-items: center;
     width: 100%;
     min-height: 5rem;
@@ -10,8 +10,20 @@
     transition: all 0.3s ease;
 }
 
+.nav__logo {
+    grid-column: 2/3;
+    justify-self: left;
+    z-index: 3;
+}
+
+.nav__logo img {
+    height: 2.5rem;
+}
+
 .nav__bar {
+    grid-column: 3/4;
     display: flex;
+    justify-self: right;
     padding: 0;
     margin: 0;
 }
@@ -36,6 +48,16 @@
 
 .nav__item:hover, .nav__menu:hover {
     background-color: var(--navHighlight);
+}
+
+.nav__item, .nav__menu {
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.nav__menu, .nav__menu i {
+    display: none;
 }
 
 /* nav__menu styling */
@@ -74,22 +96,27 @@
     line-height: 4.5rem;
 }
 
-.nav__item, .nav__menu {
-    color: white;
-    cursor: pointer;
-    padding: 1rem;
-}
-
-.nav__menu i {
-    display: none;
-}
-
 /* responsive media query start */
-@media (max-width: 800px) {
 
+@media (max-width: 1200px) {
+    
     .nav {
-        justify-content: end;
+        grid-template-columns: 1fr 1fr;
     }
+
+    .nav__logo {
+        grid-column: 1;
+        margin-left: 7rem;
+    }
+
+    .nav__bar {
+        grid-column: 2;
+        margin-right: 5rem;
+    }
+
+}
+
+@media (max-width: 800px) {
 
     .nav__bar {
         flex-direction: column;
@@ -109,10 +136,14 @@
         left: 0;
     }
     
+    .nav__menu {
+        grid-column: 4/5;
+    }
+    
     .nav__menu i {
         font-size: 3rem;
         display: block;
-        color: var(--mainText);
+        color: var(--secondaryText);
         margin-right: 2rem;
     }
 
@@ -133,4 +164,12 @@
     .nav__menu i.active:before {
         content: "\f00d"; 
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav__item a {
+        padding: 1.2rem 0.8rem;
+    }
+
 }
