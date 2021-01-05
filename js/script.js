@@ -22,10 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const setTheme = (theme) => {
         if (theme === 'light') {
             document.getElementsByClassName("theme--style")[0].href = '../css/default.css'
+            document.getElementById('nav__logo').src = "img/MW-logo--darkgrey.png"
         } else if (theme === 'blue') {
             document.getElementsByClassName("theme--style")[0].href = '../css/theme/theme-blue.css'
+            document.getElementById('nav__logo').src = "../img/MW-logo--lightgrey.png"
         } else if (theme === 'pink') {
             document.getElementsByClassName("theme--style")[0].href = '../css/theme/theme-pink.css'
+            document.getElementById('nav__logo').src = "../img/MW-logo--lightgrey.png"
         }
         
         localStorage.setItem('theme', theme);
@@ -46,24 +49,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             } else {
                 setTheme(theme);
-                themeConfirmation();
+                // themeConfirmation();
             }
         });
     }
 
-    const themeConfirmation = () => {
-        if (leftColumn.querySelectorAll("p").length === 1) {
-            // if themeConfirmation already exists then don't add another paragraph as it leads to textContent repeating.
-            return;
-        } else {
-            const themeConfirmation = document.createElement('p');
-            themeConfirmation.textContent = "*Theme will be saved for your next visit";
-            themeConfirmation.setAttribute("class", "intro__theme-save");
-            leftColumn.appendChild(themeConfirmation);
-            window.setTimeout(() => themeConfirmation.remove(), 4000);
-        }
-
-    }
+    // Commented out as I don't want to include this but may have use for it later
+    // const themeConfirmation = () => {
+    //     if (leftColumn != null) {
+    //         // if leftColumn doesn't exist then don't fire.
+    //         if (leftColumn.querySelectorAll("p").length === 1) {
+    //             // if themeConfirmation already exists then don't add another paragraph as it leads to textContent repeating.
+    //             return;
+    //         } else {
+    //             const themeConfirmation = document.createElement('p');
+    //             themeConfirmation.textContent = "*Theme will be saved for your next visit";
+    //             themeConfirmation.setAttribute("class", "intro__theme-save");
+    //             leftColumn.appendChild(themeConfirmation);
+    //             window.setTimeout(() => themeConfirmation.remove(), 4000);
+    //         }
+    //     }
+    // }
 
     // back-to-top
 
