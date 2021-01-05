@@ -1,13 +1,15 @@
 <html>
     <head>
-        <title>Matthew Woodley</title>
+        <title>To-Do List</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/png" href="./img/profile-picture.jpg"/>
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/default.css">
         <link rel="stylesheet" type="text/css" href="./css/nav-menu.css">
         <link rel="stylesheet" type="text/css" href="./css/carousel-style.css">
+        <link rel="stylesheet" type="text/css" href="./css/project.css">
         <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
         <link class="theme--style" rel="stylesheet" type="text/css" href="">
     </head>
@@ -15,14 +17,18 @@
     <header>
 
         <nav class="nav">
+
+            <a class="nav__logo" href="index.html"><img id="nav__logo" src="img/MW-logo.png"></img></a>
+
             <ul class="nav__bar">
                 <a class="nav__item" href="./index.html"><li>Home</li></a>
-                <a class="nav__item" href="#project"><li>Project</li></a>
-                <a class="nav__item" href="#contact"><li>Contact</li></a>
+                <a class="nav__item" href="./index.html#contact"><li>Contact</li></a>
             </ul>
+
             <div class="nav__menu">
                 <i class="fas fa-bars"></i>
             </div>
+            
         </nav>
 
     </header>
@@ -30,80 +36,83 @@
     <body>
         <section class="section section--mainColor">
             <div class="main">
-                <div class="greeting">
-                    <h1>To-Do List</h1>
-                </div>
+                <div id="project" class="project border">
+                    <div class="project__intro">
+                        <div class="project__title">
+                            <h1>To-Do List</h1>
+                        </div>
+                
+                        <div class="personalise-theme">
+                            <h5>Personalise Theme</h5>
+                            
+                            <div class="intro__theme-option">
+                                <div data-theme="light" class="theme shadow theme--light"></div>
+                                <div data-theme="blue" class="theme shadow theme--blue"></div>
+                                <div data-theme="pink" class="theme shadow theme--pink"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel__container">
 
-                <div class="intro">
-                    <div class="intro__col intro__col--left">
-                        <img class="intro__image" src="./img/nature.png">
-                        <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
-                        
-                        <div class="intro__theme-option">
-                            <div data-theme="light" class="theme theme--light"></div>
-                            <div data-theme="blue" class="theme theme--blue"></div>
-                            <div data-theme="pink" class="theme theme--pink"></div>
+                        <button class="carousel__button carousel__button--left is-hidden">
+                            <i class="fas fa-angle-left"></i>
+                        </button>
+                
+                        <div class="carousel__track-container">
+                            <ul class="carousel__track">
+                
+                                <li class="carousel__slide current-slide">
+                                    <p class="carousel__caption">I personally find I'm more productive if I can follow a list, so I got to work making a rudimentary to-do list app.</p>
+                                    <img class="carousel__image" src="./img/to-do-plan.png" alt="A wireframe drawing of the app in its planning stages">
+                                </li>
+
+                                <li class="carousel__slide">
+                                    <p class="carousel__caption">My goal was to be able to add, remove, mark as complete and delete-all to-dos within the list.</p>
+                                    <img class="carousel__image" src="./img/to-do-controls.png" alt="A screenshot of the app with all functionality labelled">
+                                </li>
+                
+                                <li class="carousel__slide">
+                                    <p class="carousel__caption">As a finishing touch, I added the use of local storage so that my list would be saved for the next time I opened the app.</p>
+                                    <img class="carousel__image" src="./img/to-do-list-local-storage.gif" alt="Refreshing the app keeps the to-do-list intact due to saving to local storage">
+                                </li>
+                
+                            </ul>
+                        </div>
+                
+                        <button class="carousel__button carousel__button--right">
+                            <i class="fas fa-angle-right"></i>
+                        </button>
+                
+                        <div class="carousel__nav">
+                            <button class="carousel__indicator current-slide"></button>
+                            <button class="carousel__indicator"></button>
+                            <button class="carousel__indicator"></button>
                         </div>
 
                     </div>
-                    <div class="intro__col--right">
-                        <h2 class="intro__header">Technologies</h2>
-                        <h3 class="intro__description">JavaScript, HTML, CSS</h3>
+
+                    <div class="project__info">
+                        <h2 class="project__header">Technologies</h2>
+                        <h3 class="project__languages">JavaScript, HTML, CSS</h3>
+                        <a class="project__code a-github" target="_blank" href="https://github.com/mattwoodley/to-do-list"><h6><i class="fab fa-github"></i> Click here for the code!</h6></a>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="section section--secondaryColor">
             <div class="main">
-                <div id="project" class="carousel__container">
+                <div id="contact" class="about__social--footer border shadow">
 
-                    <button class="carousel__button carousel__button--left is-hidden">
-                        <i class="fas fa-angle-left"></i>
-                    </button>
-            
-                    <div class="carousel__track-container">
-                        <ul class="carousel__track">
-            
-                            <li class="carousel__slide current-slide">
-                                <p class="carousel__caption">This is a bit about this app This is a bit about this app This is a bit about this app This is a bit about this app This is a bit about this app </p>
-                                <img class="carousel__image" src="./img/pupper-2.png" alt="____">
-                            </li>
-            
-                            <li class="carousel__slide">
-                                <p class="carousel__caption">This is a bit about this app</p>
-                                <img class="carousel__image" src="./img/pupper-3.png" alt="____">
-                            </li>
-            
-                            <li class="carousel__slide">
-                                <p class="carousel__caption">This is a bit about this app</p>
-                                <img class="carousel__image" src="./img/pupper-4.png" alt="____">
-                            </li>
-            
-                        </ul>
-                    </div>
-            
-                    <button class="carousel__button carousel__button--right">
-                        <i class="fas fa-angle-right"></i>
-                    </button>
-            
-                    <div class="carousel__nav">
-                        <button class="carousel__indicator current-slide"></button>
-                        <button class="carousel__indicator"></button>
-                        <button class="carousel__indicator"></button>
-                    </div>
-            
-                </div>
-            </div>
-        </section>
-        <section class="section section--mainColor">
-            <div class="main">
-                <div id="contact" class="about__social--footer">
-                    <img class="about__img--footer" src="./img/pupper-1.png">
+                    <img class="about__img--footer" src="./img/working.jpg" alt="Matthew sat at his home PC working on a project">
+
                     <h4>Find me on GitHub and LinkedIn</h4>
+
                     <div class="about__links--footer">
                         <a class="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
                         <a class="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i> LinkedIn</h5></a>
                     </div>
+
                 </div>
             </div>
         </section>
