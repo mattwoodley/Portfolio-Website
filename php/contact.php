@@ -1,48 +1,50 @@
 <?php
 
-if(isset($_POST['submit'])) {
-    if(isset($_POST['email']) && $_POST['email'] != ''){
-        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-            
-            $email_name = $_POST['name'];
-            $email_subject = $_POST['subject'];
-            $email_address = $_POST['email'];
-            $email_message = $_POST['message'];
+    // Only process POST requests.
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get the form fields and remove whitespace.
+        $name = strip_tags(trim($_POST["name"]));
+                $name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $message = trim($_POST["message"]);
 
-                 
-            if(isset($_POST['name'])) {
-                $email_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-            }
-
-            if(isset($_POST['subject'])) {
-                $email_subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-            }
-
-            if(isset($_POST['email'])) {
-                $email_address = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
-                $email_address = filter_var($email_address, FILTER_VALIDATE_EMAIL);
-            }
-              
-            if(isset($_POST['message'])) {
-                $email_message = htmlspecialchars($_POST['message']);
-            }
-            
-            $recipient = "contact@mattwoodley.net";
-            $header = "From: ".$email_address;
-            $body = "";
-            
-            $body .= "From: ".$email_name. "\r\n";
-            $body .= "Email: ".$email_address. "\r\n";
-            $body .= "Subject: ".$email_subject. "\r\n";
-            $body .= "Message: ".$email_message. "\r\n";
-            
-            
-            mail($recipient, $email_subject, $body, $header);
-            header("Location: ../index.html?mailsent");
-        } else {
-            header("Location: ../index.html?mailnotsent");
+        // Check that data was sent to the mailer.
+        if ( empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            // Set a 400 (bad request) response code and exit.
+            http_response_code(400);
+            echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+            exit;
         }
+
+        // Set the recipient email address.
+        $recipient = "contact@mattwoodley.net";
+
+        // Set the email subject.
+        $subject = "New contact from $name";
+
+        // Build the email content.
+        $email_content = "Name: $name\n";
+        $email_content .= "Email: $email\n\n";
+        $email_content .= "Message:\n$message\n";
+
+        // Build the email headers.
+        $email_headers = "From: $name <$email>";
+
+        // Send the email.
+        if (mail($recipient, $subject, $email_content, $email_headers)) {
+            // Set a 200 (okay) response code.
+            http_response_code(200);
+            echo "Your message has been sent.";
+        } else {
+            // Set a 500 (internal server error) response code.
+            http_response_code(500);
+            echo "Oops! Something went wrong and your message was unable to send.";
+        }
+
+    } else {
+        // Not a POST request, set a 403 (forbidden) response code.
+        http_response_code(403);
+        echo "There was a problem with your submission, please try again.";
     }
-}
 
 ?>
