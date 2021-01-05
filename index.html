@@ -4,6 +4,7 @@
         <title>Matthew Woodley</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/png" href="./img/profile-picture.jpg"/>
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
@@ -15,6 +16,7 @@
     <header>
 
             <nav class="nav">
+                <a class="nav__logo" href="index.html"><img id="nav__logo" src="img/MW-logo--darkgrey.png"></img></a>
                 <ul class="nav__bar">
                     <a class="nav__item" href="#greeting"><li>Home</li></a>
                     <a class="nav__item" href="#about"><li>About</li></a>
@@ -36,15 +38,15 @@
                     <h1>Hi, I'm Matthew Woodley</h1>
                 </div>
 
-                <div class="intro">
+                <div class="intro border shadow">
                     <div class="intro__col intro__col--left">
-                        <img class="intro__image" src="./img/profile-picture.jpg" alt="Profile picture of Matthew stood in front of a giant Christmas tree">
+                        <img class="intro__image" src="./img/profile-picture.jpg" alt="Profile picture of Matthew standing in front of a giant Christmas tree">
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
 
                         <div class="intro__theme-option">
-                            <div data-theme="light" class="theme theme--light"></div>
-                            <div data-theme="blue" class="theme theme--blue"></div>
-                            <div data-theme="pink" class="theme theme--pink"></div>
+                            <div data-theme="light" class="theme shadow theme--light"></div>
+                            <div data-theme="blue" class="theme shadow theme--blue"></div>
+                            <div data-theme="pink" class="theme shadow theme--pink"></div>
                         </div>
 
                     </div>
@@ -62,7 +64,7 @@
 
         <section id="about" class="section section--secondaryColor">
             <div class="main">
-                <div class="about">
+                <div class="about border shadow">
                     <div class="about__me">
                         <h4 class="about__title">About me</h4>
                         <p>I first got into programming when a developer-friend  introduced me to it as I was looking to change careers. He showed me the ropes and I immediately found my passion.</p>
@@ -70,10 +72,8 @@
                         <p>Since then I've been educating myself through a coding bootcamp, online courses, personal projects and creating this very website!</p>
                         
                         <p>In the future I want to work for a well reputed company which can allow me to continue my learning whilst creating meaningful applications.</p>
-                        
-                        <hr>
 
-                        <h4 class="about__title">Technical Experience</h4>
+                        <h4>Technical Experience</h4>
 
                         <p>Fullstack developer with primary focus on JavaScript, HTML + CSS: <a target="_blank" href="./img/Matthew_Woodley_CV.pdf">Open CV</a></p>
 
@@ -109,11 +109,11 @@
         <section id="projects" class="section section--mainColor">
             <div class="main">
                 
-                <div class="projects">
+                <div class="projects border shadow">
                     
                     <h3 class="projects__header">Some of my past projects</h3>
-                    <div class="projects__project">
-                        <a href="to-do-list.html">
+                    <div class="projects__project border shadow">
+                        <a href="/to-do-list.html">
                             <img class="projects__thumbnail" src="./img/to-do-list-thumbnail.png">
                             <div class="projects__preview">
                                 <h6 class="projects__title">To Do List</h6>
@@ -122,21 +122,25 @@
                             </div>
                         </a>
                     </div>
-                    <div class="projects__project">
-                        <img class="projects__thumbnail" src="./img/pupper-3.png">
-                        <div class="projects__preview">
-                            <h6 class="projects__title">project Title</h6>
-                            <p class="projects__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. Some more text. </p>
-                            <p class="projects__link">Read More</p>
-                        </div>
+                    <div class="projects__project border shadow">
+                        <a href="/tetris.html">
+                            <img class="projects__thumbnail" src="./img/pupper-3.png">
+                            <div class="projects__preview">
+                                <h6 class="projects__title">project Title</h6>
+                                <p class="projects__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. Some more text. </p>
+                                <p class="projects__link">Read More</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="projects__project">
-                        <img class="projects__thumbnail" src="./img/pupper-4.png">
-                        <div class="projects__preview">
-                            <h6 class="projects__title">project Title</h6>
-                            <p class="projects__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. </p>
-                            <p class="projects__link">Read More</p>
-                        </div>
+                    <div class="projects__project border shadow">
+                        <a href="/project-3.html">
+                            <img class="projects__thumbnail" src="./img/pupper-4.png">
+                            <div class="projects__preview">
+                                <h6 class="projects__title">project Title</h6>
+                                <p class="projects__intro">This is a quick intro for a past project. Some more text. Some more text. Some more text. </p>
+                                <p class="projects__link">Read More</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -146,21 +150,22 @@
             <div class="main">
                 <h3 style="text-align: center;">Get In Touch</h3>
 
-                <form class="contact__form" method="POST" action="https://formspree.io/m17woodley@gmail.com">
-                    <label>Name</label>
-                    <input class="contact__input" type="text" name="name">
+                <form class="contact__form border shadow" action="./php/contact.php" method="POST">
+                    <label for="name">Your Name</label>
+                    <input id="name" class="contact__input border" type="text" name="name">
 
-                    <label>Subject</label>
-                    <input class="contact__input" type="text" name="subject">
+                    <label for="subject">Subject</label>
+                    <input id="subject" class="contact__input border" type="text" name="subject">
 
-                    <label>Email</label>
-                    <input class="contact__input" type="email" name="email">
+                    <label for="email">Email</label>
+                    <input id="email" class="contact__input border" type="email" name="email" required>
 
-                    <label>Message</label>
-                    <textarea class="contact__input" name="message"></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" class="contact__input" name="message" required></textarea>
 
-                    <input class="contact__btn" type="submit" value="Send">
+                    <input class="contact__btn" type="submit" name="submit" value="Send">
                 </form>
+
             </div>
         </section>
 
