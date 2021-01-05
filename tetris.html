@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Tetris</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/png" href="./img/profile-picture.jpg"/>
+        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/default.css">
+        <link rel="stylesheet" type="text/css" href="./css/nav-menu.css">
+        <link rel="stylesheet" type="text/css" href="./css/tetris-app.css">
+        <link rel="stylesheet" type="text/css" href="./css/project.css">
+        <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
+        <link class="theme--style" rel="stylesheet" type="text/css" href="">
+
+    </head>
+
+    <header>
+
+        <nav class="nav">
+
+            <a class="nav__logo" href="index.html"><img id="nav__logo" src="img/MW-logo.png"></img></a>
+
+            <ul class="nav__bar">
+                <a class="nav__item" href="./index.html"><li>Home</li></a>
+                <a class="nav__item" href="#project"><li>Project</li></a>
+                <a class="nav__item" href="#contact"><li>Contact</li></a>
+            </ul>
+
+            <div class="nav__menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+        </nav>
+
+    </header>
+
+    <body>
+        <section class="section section--mainColor">
+            <div class="main">
+                <div class="greeting">
+                    <h1>Tetris</h1>
+                </div>
+
+                <div class="intro border shadow">
+                    <div class="intro__col intro__col--left">
+
+                        <img class="intro__image" src="./img/profile-picture.jpg" alt="Profile picture of Matthew stood in front of a giant Christmas tree">
+                        <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
+                        
+                        <div class="intro__theme-option">
+                            <div data-theme="light" class="theme shadow theme--light"></div>
+                            <div data-theme="blue" class="theme shadow theme--blue"></div>
+                            <div data-theme="pink" class="theme shadow theme--pink"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="intro__col--right">
+                        <h2 class="project__header">Technologies</h2>
+                        <h3 class="project__languages">JavaScript, HTML, CSS</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section section--secondaryColor">
+            <div class="main">
+                <div id="project" class="tetris border shadow">
+
+                    <div class="tetris__controls border">
+                        <h4>Controls</h4>
+                        <p>A: Move Left</p>
+                        <p>D: Move Right</p>
+                        <p>Q: Rotate Left</p>
+                        <p>E: Rotate Right</p>
+                        <p>S: Drop 1 Space</p>
+                        <p>F: Drop To Bottom</p>
+                    </div>
+
+                    <div class="tetris__canvas-wrapper">
+                        <canvas id="tetris" class="tetris__canvas border" width="200" height="400"></canvas>
+                    </div>
+                
+                    <div class="tetris__stats border">
+                        <div class="tetris__level">Level: 1</div>
+                        <div class="tetris__score">Score: 0</div>
+                    </div>
+
+                    <div class="project__code border">
+                        <a class="a-github" target="_blank" href="https://github.com/mattwoodley/to-do-list"><h6><i class="fab fa-github"></i> Click here for the code!</h6></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--mainColor">
+            <div class="main">
+                <div id="contact" class="about__social--footer border shadow">
+
+                    <img class="about__img--footer" src="./img/working.jpg" alt="Matthew sat at his home PC working on a project">
+
+                    <h4>Find me on GitHub and LinkedIn</h4>
+
+                    <div class="about__links--footer">
+                        <a class="a-github" target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
+                        <a class="a-linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i> LinkedIn</h5></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <i class="fas fa-angle-up"></i>
+        </div>
+
+        <script src="./js/script.js"></script>
+        <script src="./js/tetris-app.js"></script>
+    </body>
+
+</html>
