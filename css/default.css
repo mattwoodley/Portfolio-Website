@@ -31,6 +31,7 @@ html {
     margin: 0;
     scroll-padding-top: 5rem; /* height of sticky header */
     scroll-behavior: smooth;
+    background-color: #000;
 }
 
 body {
@@ -372,11 +373,53 @@ a, p, li, span, label, input, textarea { font-size: 1.5rem }
     border-radius: 0.5rem;
 }
 
+.footer {
+    display: grid;
+    grid-template-columns: 20% 2fr 0.1fr 0.1fr 0.1fr 20%;
+    min-height: 5rem;
+    gap: 1rem;
+    background-color: #000;
+}
+
+.footer * {
+    color: #fff;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.footer__copyright {
+    grid-column: 2;
+    font-size: 1.2rem;
+    justify-self: left;
+}
+
+.footer__email {
+    grid-column: 3;
+}
+
+.footer__email {
+    font-size: 2rem;
+}
+
+.footer__github {
+    grid-column: 4;
+    font-size: 2rem;
+}
+
+.footer__linkedin {
+    grid-column: 5;
+    font-size: 2rem;
+}
 
 @media screen and (max-width: 1200px) {
  
     .main {
         width: 95%;
+    }
+
+    .footer {
+        grid-template-columns: 10% 2fr 0.1fr 0.1fr 0.1fr 10%;
     }
 
 }
