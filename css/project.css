@@ -1,65 +1,35 @@
 .project {
     background-color: var(--secondaryColor);
-    margin: 10rem 0 5rem;
+    margin: 7rem 0 2rem; /* margin-top needs to include 50px to account for the sticky nav */
 }
 
 .project__intro {
     display: grid;
-    grid-template-areas: 
-        "title personalise";
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
 }
 
 .project__title {
-    grid-area: title;
-    justify-self: center;
-    align-self: center;
-}
-
-.project__title h1 {
-    margin: 1rem 0;
-}
-
-.personalise-theme {
-    grid-area: personalise;
-    justify-self: center;
-    align-self: center;
-}
-
-.personalise-theme h5 {
-    margin: 0;
-}
-
-.project__info {
-    display: grid;
-    grid-template-areas: 
-        "header code"
-        "languages code";
-    margin: 2rem 0 1rem;
-}
-
-.project__header {
-    grid-area: header;
-    justify-self: center;
+    text-align: center;
     text-decoration: underline;
-    font-size: 4rem;
-    margin: 0;
+    margin: 1rem 0;
+    font-size: 5rem;
 }
 
 .project__languages {
-    grid-area: languages;
-    justify-self: center;
+    text-align: center;
     font-size: 3rem;
     margin: 0;
 }
 
 .project__code {
-    grid-area: code;
     display: flex;
     justify-content: center;
-    align-self: center;
-    justify-self: center;
-    height: 5rem;
-    width: 15rem;
+    margin: 0 auto 1rem auto;
+    height: 2.5rem;
+    width: 27rem;
     border: 0.1rem solid var(--mainText);
     border-radius: 0.5rem;
 }
@@ -70,142 +40,70 @@
     margin: 0;
 }
 
-.about__social--footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 2fr 1fr;
-    grid-template-areas: 
-        "image header header"
-        "image links links";
-    align-content: center;
-    text-align: center;
-    gap: 0 1rem;
-    padding: 2rem;
-    background-color: var(--mainColor);
-    margin: 5rem 0;
-}
-
-.about__social--footer h4 {
-    grid-area: header;
-    align-self: center;
-    font-size: 4rem;
-    margin: 0;
-}
-
-.about__img--footer {
-    grid-area: image;
-    grid-column: 1/2;
-    grid-row: 1/3;
-    width: 100%;
-    border-radius: 0.5rem;
-}
-
-.about__links--footer {
-    grid-area: links;
-    display: flex;
-    justify-content: center;
-    align-self: start;
-}
-
-.about__links--footer h5 {
-    color: #1ab9d1;
-    padding: 0 5rem;
-    margin: 0;
-    font-size: 3rem;
-}
-
 @media screen and (max-width: 1200px) {
  
-    .main {
-        width: 95%;
+    .project__intro {
+        margin: 1rem;
     }
 
-    .project__header {
+    .project__title {
         font-size: 4rem;
     }
-    
+
     .project__languages {
+        padding: 0 4rem;
         font-size: 3rem;
     }
     
-    .about__links--footer {
-        gap: 1.5rem;
-    }
-
-    .about__social--footer h4 {
-        font-size: 3.4rem;
-    }
-    
-    .about__links--footer h5 {
-        padding: 0 2rem;
-        font-size: 2.5rem;
-    }
 }
 
 @media screen and (max-width: 800px) {
 
+    .project__intro {
+        margin: 0;
+    }
+
+    .project__title {
+        font-size: 4rem;
+    }
+
     .project__languages {
-        padding-top: 1rem;
+        font-size: 2.5rem;
+        padding: 1rem;
     }
 
-    .about__social--footer h4 {
-        font-size: 2.8rem;
+    .project__code {
+        height: 2rem;
+        width: 22rem;
     }
 
-    .about__links--footer h5 {
-        padding: 0 1rem;
-        font-size: 2rem;
+    .project__code h6 {
+        font-size: 1.6rem;
     }
 
 }
 
 @media screen and (max-width: 600px) {
 
-    .project__header {
-        font-size: 3.4rem;
-        padding: 0 1rem;
+    .project__intro {
+        margin: 0;
     }
-    
+
+    .project__title {
+        font-size: 3rem;
+    }
+
     .project__languages {
-        font-size: 2.6rem;
+        font-size: 2rem;
         padding: 0 1rem;
     }
 
-    .about__social--footer {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-            "image header header"
-            "image links links";
-        align-content: center;
-        text-align: center;
-        padding: 2rem 1rem 1rem;
+    .project__code {
+        height: 1.6rem;
+        width: 19rem;
     }
-    
-    .about__social--footer h4 {
-        font-size: 2rem;
-    }
-    
-    .about__img--footer {
-        grid-area: image;
-        grid-column: 1/2;
-        grid-row: 1/3;
-        width: 100%;
-    }
-    
-    .about__links--footer {
-        grid-area: links;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        gap: 1.5rem;
-    }
-    
-    .about__links--footer h5 {
-        color: #1ab9d1;
-        padding: 0;
-        margin: 0;
-        font-size: 1.6rem;
+
+    .project__code h6 {
+        font-size: 1.4rem;
     }
 }
