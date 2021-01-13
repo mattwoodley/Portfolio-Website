@@ -52,6 +52,7 @@ body {
   height: 15rem;
   width: 20rem;
   margin-top: 10rem;
+  color: var(--mainText);
 }
 
 .tetris__intro {
