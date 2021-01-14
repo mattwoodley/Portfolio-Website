@@ -71,6 +71,10 @@ h5 { font-size:2.0rem }
 h6 { font-size:1.6rem }
 a, p, li, span, label, input, textarea { font-size: 1.5rem }
 
+.is-hidden {
+    display: none;
+}
+
 /* Div styles */
 
 .section {

@@ -92,10 +92,6 @@
     background: var(--carouselIndicatorCurrent);
 }
 
-.is-hidden {
-    display: none;
-}
-
 @media only screen and (max-width: 1200px) {
 
     .carousel__container {
