@@ -14,8 +14,6 @@
     --mainText: #000;
     --secondaryText: #4B5156;
 
-    --themeDotBorder: #24292E;
-
     --previewBg: rgb(251, 249, 243, 0.8);
     --previewShadow: #F0EAD6;
 
@@ -145,45 +143,6 @@ a, p, li, span, label, input, textarea { font-size: 1.5rem }
     width: 25rem;
     object-fit: cover;
     border: 0.2rem solid var(--borderColor);
-}
-
-.intro__theme-option {
-    display: flex;
-    justify-content: center;
-}
-
-.theme {
-    height: 3.0rem;
-    width: 3.0rem;
-    background-color: #000;
-    border-radius: 50%;
-    margin: 0.5rem;
-    border: 0.2rem solid var(--themeDotBorder);
-    cursor: pointer;
-}
-
-.theme:hover {
-    border-width: 0.5rem;
-}
-
-.theme--light {
-    background-color: #fff;
-}
-
-.theme--blue {
-    background-color: #263c50;
-}
-
-.theme--pink {
-    background-color: rgb(135, 63, 136);
-}
-
-.theme-save {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2rem;
-    font-style: italic;
-    text-align: center;
 }
 
 .intro__col--right {

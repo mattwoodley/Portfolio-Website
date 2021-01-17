@@ -17,12 +17,19 @@
     <header>
 
             <nav class="nav">
-                <a class="nav__logo" href="index.html"><img id="nav__logo" src="img/MW-logo--darkgrey.png"></img></a>
+                <a class="nav__logo" href="index.html"><img id="nav__logo" src="img/MW-logo--black.png"></img></a>
                 <ul class="nav__bar">
-                    <a class="nav__item" href="#greeting"><li>Home</li></a>
-                    <a class="nav__item" href="#about"><li>About</li></a>
-                    <a class="nav__item" href="#projects"><li>Projects</li></a>
-                    <a class="nav__item" href="#contact"><li>Contact</li></a>
+                    <a href="#greeting"><li class="nav__item">Home</li></a>
+                    <a href="#about"><li class="nav__item">About</li></a>
+                    <a href="#projects"><li class="nav__item">Projects</li></a>
+                    <a href="#contact"><li class="nav__item">Contact</li></a>
+                    <li class="nav__item">Theme
+                        <ul class="nav__dropdown">
+                            <li data-theme="light" class="dropdown__item"><div class="theme__dot theme__dot--light"></div>Light</li>
+                            <li data-theme="blue" class="dropdown__item"><div class="theme__dot theme__dot--blue"></div>Blue</li>
+                            <li data-theme="pink" class="dropdown__item"><div class="theme__dot theme__dot--pink"></div>Pink</li>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="nav__menu">
                     <i class="fas fa-bars"></i>
@@ -43,13 +50,6 @@
                     <div class="intro__col intro__col--left">
                         <img class="intro__image" src="./img/profile-picture.jpg" alt="Profile picture of Matthew standing in front of a giant Christmas tree">
                         <h5 style="text-align: center; line-height: 0;">Personalise Theme</h5>
-
-                        <div class="intro__theme-option">
-                            <div data-theme="light" class="theme shadow theme--light"></div>
-                            <div data-theme="blue" class="theme shadow theme--blue"></div>
-                            <div data-theme="pink" class="theme shadow theme--pink"></div>
-                        </div>
-
                     </div>
                     <div class="intro__col intro__col--right">
                         <div class="preview__shadow">

@@ -59,6 +59,11 @@
 
 @media screen and (max-width: 800px) {
 
+    .project {
+        margin: 9rem 0 2rem; /* margin-top needs to include 70px to account for the sticky nav */
+    }
+
+
     .project__intro {
         margin: 0;
     }

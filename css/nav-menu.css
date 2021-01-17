@@ -10,6 +10,29 @@
     transition: all 0.3s ease;
 }
 
+.nav__dropdown {
+    display: none;
+    position: fixed;
+    background-color: var(--navColor);
+    margin-top: 1.4rem;
+    padding-left: 0;
+    height: 12rem;
+    width: 10rem;
+    transform: translate(-2rem);
+}
+
+.nav ul li:hover > ul{
+    display: grid;
+}
+
+.dropdown__item {
+    display: flex;
+    justify-content: left;
+    padding: 1rem;
+    gap: 1rem;
+    color: var(--mainText);
+}
+
 .nav__logo {
     grid-column: 2/3;
     justify-self: left;
@@ -31,27 +54,16 @@
 .nav__item {
     box-sizing: border-box;
     min-height: 5rem;
-}
-
-.nav__item li {
     font-size: 2rem;
 }
 
-.nav__item a, .nav__menu a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--mainText);
-    font-size: 2rem;
-    transition: color 0.3s ease;
-}
-
-.nav__item:hover, .nav__menu:hover {
+.nav__item:hover, .nav__menu:hover, .dropdown__item:hover {
     background-color: var(--navHighlight);
+    text-decoration: underline;
 }
 
 .nav__item, .nav__menu {
-    color: white;
+    color: var(--mainText);
     cursor: pointer;
     padding: 1rem;
 }
@@ -60,7 +72,27 @@
     display: none;
 }
 
-/* nav__menu styling */
+.theme__dot {
+    display: flex;
+    align-self: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: 0.2rem solid #000;
+    cursor: pointer;
+}
+
+.theme__dot--light {
+    background-color: #fff;
+}
+
+.theme__dot--blue {
+    background-color: #263c50;
+}
+
+.theme__dot--pink {
+    background-color: #723e6b;
+}
 
 .back-to-top {
     position: fixed;
@@ -131,6 +163,30 @@
         padding-left: 0;
         transition: all 0.3s ease;
     }
+
+    .nav__dropdown {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 100%;
+        height: auto;
+        margin-top: -4.7rem;
+    }
+
+    .dropdown__item {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: auto;
+        margin: 0;
+        padding: 2rem;
+        gap: 1rem;
+        color: var(--mainText);
+    }
+
+    .nav__bar > .nav__item {
+        color: transparent;
+    }
     
     .nav__bar.active {
         left: 0;
@@ -143,33 +199,25 @@
     .nav__menu i {
         font-size: 3rem;
         display: block;
-        color: var(--secondaryText);
+        color: var(--mainText);
         margin-right: 2rem;
     }
 
     .nav__item, .nav__menu {
         display: block;
+        padding: 2rem;
         z-index: 3;
     }
     
     .nav__item li {
-        font-size: 4rem;
+        font-size: 2rem;
     }
-    .nav__item:hover, .nav__menu:hover {
+    .nav__item:hover, .nav__menu:hover, .dropdown__item:hover {
         background-color: transparent;
     }
-
 
     /* \f00d is the 'X' fontAwesome icon */
     .nav__menu i.active:before {
         content: "\f00d"; 
     }
-}
-
-@media only screen and (max-width: 600px) {
-
-    .nav__item a {
-        padding: 1.2rem 0.8rem;
-    }
-
 }

@@ -132,6 +132,7 @@
   .tetris {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 7rem 0.5fr 0.5fr 5rem;
+    margin: 9rem 0 2rem 0;
     gap: 0;
   }
 

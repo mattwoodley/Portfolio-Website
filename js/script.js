@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded');
 
-    const themes = document.getElementsByClassName('theme');
-    const leftColumn = document.querySelector('.intro__col--left');
+    const themes = document.querySelectorAll('.dropdown__item')
     const currentTheme = localStorage.getItem('theme');
     
     const navBar = document.querySelector('.nav__bar');
+    const navItems = document.querySelectorAll('.nav__item');
     const menu = document.querySelector('.nav__menu');
 
     const backToTop = document.querySelector('.back-to-top');
@@ -14,15 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
         elm.classList.toggle(cssClass);
     }
 
+    // Hamburger menu click opens and closes the mobile/tablet nav
+
     menu.addEventListener('click', () => {
         toggleClass(navBar, 'active');
         toggleClass(menu.children[0], 'active'); // Accesses fontAwesome i tag. Changes icon from burger to X 
     });
 
+    // Hamburger nav item click closes the mobile/tablet nav
+
+    for (i=0; i < navItems.length; i++) {
+        // navItems includes themes so to negate closing upon setTheme use navItems.length-1
+        if (i < navItems.length-1) {
+            navItems[i].addEventListener('click', () => {
+                toggleClass(navBar, 'active');
+                toggleClass(menu.children[0], 'active');
+            });
+        }
+    }
+
     const setTheme = (theme) => {
         if (theme === 'light') {
             document.getElementsByClassName("theme--style")[0].href = '../css/default.css'
-            document.getElementById('nav__logo').src = "img/MW-logo--darkgrey.png"
+            document.getElementById('nav__logo').src = "img/MW-logo--black.png"
         } else if (theme === 'blue') {
             document.getElementsByClassName("theme--style")[0].href = '../css/theme/theme-blue.css'
             document.getElementById('nav__logo').src = "../img/MW-logo--lightgrey.png"
@@ -49,27 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             } else {
                 setTheme(theme);
-                // themeConfirmation();
             }
         });
     }
-
-    // Commented out as I don't want to include this but may have use for it later
-    // const themeConfirmation = () => {
-    //     if (leftColumn != null) {
-    //         // if leftColumn doesn't exist then don't fire.
-    //         if (leftColumn.querySelectorAll("p").length === 1) {
-    //             // if themeConfirmation already exists then don't add another paragraph as it leads to textContent repeating.
-    //             return;
-    //         } else {
-    //             const themeConfirmation = document.createElement('p');
-    //             themeConfirmation.textContent = "*Theme will be saved for your next visit";
-    //             themeConfirmation.setAttribute("class", "intro__theme-save");
-    //             leftColumn.appendChild(themeConfirmation);
-    //             window.setTimeout(() => themeConfirmation.remove(), 4000);
-    //         }
-    //     }
-    // }
 
     // back-to-top
 
@@ -82,8 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({top: 0});
-    });
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            if (navBar.classList.contains('active')) {
+                toggleClass(navBar, 'active');
+            }
+            window.scrollTo({top: 0});
+        });
+    }
 
 });
