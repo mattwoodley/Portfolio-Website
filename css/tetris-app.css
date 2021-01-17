@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 7rem 1fr 5rem;
-  margin: 7rem 0 2rem 0;
+  margin: 9rem 0 4rem 0;
   background-color: var(--secondaryColor);
   gap: 1rem;
 }
@@ -132,7 +132,7 @@
   .tetris {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 7rem 0.5fr 0.5fr 5rem;
-    margin: 9rem 0 2rem 0;
+    margin: 11rem 0 4rem 0;
     gap: 0;
   }
 
