@@ -107,10 +107,10 @@ a, p, li, span, label, input, textarea { font-size: 1.5rem }
 
 .intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
     grid-template-areas: 
-    'greeting greeting'
-    'intro__col--left intro__col--right'
+    'greeting greeting greeting greeting'
+    '. intro__col--left intro__col--right .'
     ;
     
     background-color: var(--secondaryColor);
@@ -149,23 +149,29 @@ a, p, li, span, label, input, textarea { font-size: 1.5rem }
 .intro__col--right {
     grid-area: intro__col--right;
     display: grid;
+    justify-content: center;
     align-content: center;
     margin-bottom: 3rem;
 }
 
 .preview__shadow {
     background-color: var(--previewShadow);
-    width: 30rem;
-    height: 18rem;
+    width: 27rem;
+    height: 18.1rem;
     padding-left: 3rem;
     padding-top: 3rem;
 }
 
 .preview {
+    box-sizing: border-box;
     width: 30rem;
-    border: 0.15rem solid #1ab9d1;
+    border: 0.1rem solid var(--borderColor);
     background-color: var(--previewBg);
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
+}
+
+.preview h3 {
+    margin: 1.5rem 0;
 }
 
 .about {
@@ -449,14 +455,13 @@ a, p, li, span, label, input, textarea { font-size: 1.5rem }
     }
 
     .intro__image {
-        height: 20rem;
-        width: 20rem;
+        height: 23rem;
+        width: 23rem;
     }
 
     .preview {
-        width: 20rem;
-        border: 0.15rem solid #1ab9d1;
-        background-color: var(--previewBg);
+        width: 23rem;
+        height: 21rem;
         padding: 1rem;
     }
 
