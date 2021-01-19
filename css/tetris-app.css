@@ -33,6 +33,7 @@
   grid-area: 2 / 2 / auto / 3;
   justify-self: center;
   position: relative;
+  border: 1rem solid var(--borderColor);
 }
   
 .tetris__canvas {
