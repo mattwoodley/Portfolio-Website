@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/png" href="./img/profile-picture.jpg"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/default.css">
@@ -56,7 +57,10 @@
                     </div>
 
                     <div class="tetris__canvas-wrapper">
-                        <button class="tetris__start border shadow">Start!</button>
+                        <button class="tetris__start">Start!</button>
+                        <img class="tetris__grey-bg is-hidden"/>
+                        <h6 class="tetris__game-over is-hidden">Game Over</h6>
+                        <button class="tetris__replay is-hidden">Play Again?</button>
                         <img class="tetris__title-screen" src="./img/tetris-title-screen.png"/>
                         <div class="tetris__grid is-hidden"></div>
                         <canvas id="tetris" class="tetris__canvas" width="200" height="400"></canvas>
