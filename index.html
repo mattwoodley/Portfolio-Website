@@ -1,186 +1,223 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Matthew Woodley</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" type="image/png" href="./img/profile-picture.jpg"/>
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./css/default.css">
-        <link rel="stylesheet" type="text/css" href="./css/nav-menu.css">
-        <link class="theme--style" rel="stylesheet" type="text/css" href="">
-    </head>
-    
-    <header>
 
-            <nav class="nav">
-                <a class="nav__logo" href="index.html"><img id="nav__logo" src="img/MW-logo--black.png"></img></a>
-                <ul class="nav__bar">
-                    <a href="#greeting"><li class="nav__item">Home</li></a>
-                    <a href="#about"><li class="nav__item">About</li></a>
-                    <a href="#projects"><li class="nav__item">Projects</li></a>
-                    <a href="#contact"><li class="nav__item">Contact</li></a>
-                    <li class="nav__item">Theme
-                        <ul class="nav__dropdown">
-                            <li data-theme="light" class="dropdown__item"><div class="theme__dot theme__dot--light"></div>Light</li>
-                            <li data-theme="blue" class="dropdown__item"><div class="theme__dot theme__dot--blue"></div>Blue</li>
-                            <li data-theme="pink" class="dropdown__item"><div class="theme__dot theme__dot--pink"></div>Pink</li>
-                        </ul>
+<head>
+    <title>Matthew Woodley</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/60f46e1e01.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="./img/profile-picture.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/default.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav-menu.css">
+    <link class="theme--style" rel="stylesheet" type="text/css" href="">
+</head>
+
+<header>
+
+    <nav class="nav">
+        <a class="nav__logo" href="index.html"><img id="nav__logo" src="img/MW-logo--black.png"></img></a>
+        <ul class="nav__bar">
+            <a href="#greeting">
+                <li class="nav__item">Home</li>
+            </a>
+            <a href="#about">
+                <li class="nav__item">About</li>
+            </a>
+            <a href="#projects">
+                <li class="nav__item">Projects</li>
+            </a>
+            <a href="#contact">
+                <li class="nav__item">Contact</li>
+            </a>
+            <li class="nav__item">Theme
+                <ul class="nav__dropdown">
+                    <li data-theme="light" class="dropdown__item">
+                        <div class="theme__dot theme__dot--light"></div>Light
+                    </li>
+                    <li data-theme="blue" class="dropdown__item">
+                        <div class="theme__dot theme__dot--blue"></div>Blue
+                    </li>
+                    <li data-theme="pink" class="dropdown__item">
+                        <div class="theme__dot theme__dot--pink"></div>Pink
                     </li>
                 </ul>
-                <div class="nav__menu">
-                    <i class="fas fa-bars"></i>
+            </li>
+        </ul>
+        <div class="nav__menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+</header>
+
+<body>
+
+    <section class="section section--mainColor">
+        <div class="main">
+            <div class="intro border shadow">
+                <div id="greeting" class="intro__greeting">
+                    <h1>Hi, I'm Matthew Woodley</h1>
                 </div>
-            </nav>
-
-    </header>
-
-    <body>
-
-        <section class="section section--mainColor">
-            <div class="main">
-                <div class="intro border shadow">
-                    <div id="greeting" class="intro__greeting">
-                        <h1>Hi, I'm Matthew Woodley</h1>
-                    </div>
-                    <div class="intro__col intro__col--left">
-                        <img class="intro__image" src="./img/profile-picture.jpg" alt="Profile picture of Matthew standing in front of a giant Christmas tree">
-                    </div>
-                    <div class="intro__col intro__col--right">
-                        <div class="preview__shadow">
-                            <div class="preview">
-                                <h3>I am...</h3>
-                                <p>...A former Voice Actor turned Web Developer, looking to continue developing my skills at an exciting company!</p>
-                            </div>
+                <div class="intro__col intro__col--left">
+                    <img class="intro__image" src="./img/profile-picture.jpg"
+                        alt="Profile picture of Matthew standing in front of a giant Christmas tree">
+                </div>
+                <div class="intro__col intro__col--right">
+                    <div class="preview__shadow">
+                        <div class="preview">
+                            <h3>I am...</h3>
+                            <p>...A former Voice Actor turned Full Stack Developer, looking to continue developing my
+                                skills at
+                                an exciting company!</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="section section--secondaryColor">
-            <div class="main">
-                <div class="about border shadow">
-                    <div class="about__me">
-                        <h4 class="about__title">About me</h4>
-                        <p>I first got into programming when a developer-friend introduced me to it. He showed me the ropes and I immediately found my passion.</p>
+    <section id="about" class="section section--secondaryColor">
+        <div class="main">
+            <div class="about border shadow">
+                <div class="about__me">
+                    <h4 class="about__title">About me</h4>
+                    <p>I first got into programming when a developer-friend introduced me to it. He showed me the ropes
+                        and I immediately found my passion.</p>
 
-                        <p>Since then I've been coding everyday, educating myself through a <a href="https://codeclan.com/courses/professional-software-development/" target="_blank">coding bootcamp</a>, online courses, personal projects and creating this very website!</p>
-                        
-                        <p>In the future I want to work for a well reputed company which can allow me to continue pursuing my passion for learning whilst creating meaningful applications.</p>
+                    <p>Since then I've been coding everyday, educating myself through <a
+                            href="https://codeclan.com/courses/professional-software-development/"
+                            target="_blank">Professional Software Development (SCQF Level 8)</a>, online courses,
+                        personal
+                        projects and creating this very website!</p>
 
-                        <h4>Technical Experience</h4>
+                    <p>In the future I want to work for a well reputed company which can allow me to continue pursuing
+                        my passion for learning whilst creating meaningful applications.</p>
 
-                        <p>Fullstack developer with primary focus on JavaScript, HTML + CSS: <a target="_blank" href="./img/Matthew_Woodley_CV.pdf">Open CV</a></p>
+                    <h4>Technical Experience</h4>
 
-                        <div class="about__skills">
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>Java</li>
-                                <li>Ruby</li>
-                                <li>React</li>
-                            </ul>
-                            <ul>
-                                <li>Postgres</li>
-                                <li>Sinatra</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                            </ul>
-                        </div>
+                    <p>Fullstack developer with primary focus on JavaScript, HTML + CSS: <a target="_blank"
+                            href="./img/Matthew_Woodley_CV.pdf">Open CV</a></p>
 
+                    <div class="about__skills">
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>Ruby</li>
+                            <li>React</li>
+                        </ul>
+                        <ul>
+                            <li>Postgres</li>
+                            <li>Sinatra</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
                     </div>
 
-                    <div class="about__social">
-                        <img class="about__img" src="./img/working.jpg" alt="Matthew sat at his home PC working on a project">
-                        <h4>Find me on GitHub and LinkedIn</h4>
-                        <div class="about__links">
-                            <a target="_blank" href="https://github.com/mattwoodley"><h5><i class="fab fa-github"></i> GitHub</h5></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><h5><i class="fab fa-linkedin"></i> LinkedIn</h5></a>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="projects" class="section section--mainColor">
-            <div class="main">
-                
-                <div class="projects border shadow">
-                    
-                    <h3 class="projects__header">Some of my past projects</h3>
-                    <div class="projects__project border shadow">
-                        <a href="/to-do-list.html">
-                            <img class="projects__thumbnail" src="./img/to-do-list-thumbnail.png">
-                            <div class="projects__preview">
-                                <h6 class="projects__title">To Do List</h6>
-                                <p class="projects__intro">I benefit greatly from maintaining a list, so the idea of creating my own app naturally came about...</p>
-                                <p class="projects__link">Read More</p>
-                            </div>
+                <div class="about__social">
+                    <img class="about__img" src="./img/working.jpg"
+                        alt="Matthew sat at his home PC working on a project">
+                    <h4>Find me on GitHub and LinkedIn</h4>
+                    <div class="about__links">
+                        <a target="_blank" href="https://github.com/mattwoodley">
+                            <h5><i class="fab fa-github"></i> GitHub</h5>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/mattwoodley17/">
+                            <h5><i class="fab fa-linkedin"></i> LinkedIn</h5>
                         </a>
                     </div>
-                    <div class="projects__project border shadow">
-                        <a href="/tetris.html">
-                            <img class="projects__thumbnail" src="./img/tetris-thumbnail.png">
-                            <div class="projects__preview">
-                                <h6 class="projects__title">Tetris</h6>
-                                <p class="projects__intro">A fun but difficult task, learning how HTML canvas works and trying not to play too much!</p>
-                                <p class="projects__link">Read More</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="projects__project border shadow">
-                        <!-- <a href=""> -->
-                            <img class="projects__thumbnail" src="https://i0.wp.com/cliqist.com/wp-content/uploads/2014/07/underdevelopmentlogo.jpg?fit=1126%2C451">
-                            <div class="projects__preview">
-                                <h6 class="projects__title">Under Development...</h6>
-                                <p class="projects__intro">More projects coming soon</p>
-                                <p class="projects__link">Read More</p>
-                            </div>
-                        <!-- </a> -->
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="section section--secondaryColor">
-            <div class="main">
-                <h3 style="text-align: center;">Get In Touch</h3>
+    <section id="projects" class="section section--mainColor">
+        <div class="main">
 
-                <div id="contact__alert" class="contact__alert"></div>
+            <div class="projects border shadow">
 
-                <form id="ajax-contact" class="contact__form border shadow" action="./php/contact.php" method="POST">
-                    <label for="name">Your Name</label>
-                    <input id="name" class="contact__input border" type="text" name="name">
-
-                    <label for="email">Email</label>
-                    <input id="email" class="contact__input border" type="email" name="email">
-
-                    <label for="message">Message</label>
-                    <textarea id="message" class="contact__input" name="message"></textarea>
-
-                    <input class="contact__btn" type="submit" name="submit" value="Send">
-                </form>
-
+                <h3 class="projects__header">Some of my past projects</h3>
+                <div class="projects__project border shadow">
+                    <a href="/to-do-list.html">
+                        <img class="projects__thumbnail" src="./img/to-do-list-thumbnail.png">
+                        <div class="projects__preview">
+                            <h6 class="projects__title">To Do List</h6>
+                            <p class="projects__intro">I benefit greatly from maintaining a list, so the idea of
+                                creating my own app naturally came about...</p>
+                            <p class="projects__link">Read More</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__project border shadow">
+                    <a href="/tetris.html">
+                        <img class="projects__thumbnail" src="./img/tetris-thumbnail.png">
+                        <div class="projects__preview">
+                            <h6 class="projects__title">Tetris</h6>
+                            <p class="projects__intro">A fun but difficult task, learning how HTML canvas works and
+                                trying not to play too much!</p>
+                            <p class="projects__link">Read More</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projects__project border shadow">
+                    <!-- <a href=""> -->
+                    <img class="projects__thumbnail"
+                        src="https://i0.wp.com/cliqist.com/wp-content/uploads/2014/07/underdevelopmentlogo.jpg?fit=1126%2C451">
+                    <div class="projects__preview">
+                        <h6 class="projects__title">Under Development...</h6>
+                        <p class="projects__intro">More projects coming soon</p>
+                        <p class="projects__link">Read More</p>
+                    </div>
+                    <!-- </a> -->
+                </div>
             </div>
-        </section>
-
-        <div class="back-to-top">
-            <i class="fas fa-angle-up"></i>
         </div>
+    </section>
 
-        <div class="footer">
-            <div class="footer__copyright">©2020 Matthew Woodley</div>
-            <a class="footer__email" href="mailto:contact@mattwoodley.net"><i class="fas fa-envelope"></i></a>
-            <a class="footer__github" target="_blank" href="https://github.com/mattwoodley"><i class="fab fa-github"></i></a>
-            <a class="footer__linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><i class="fab fa-linkedin"></i></a>
+    <section id="contact" class="section section--secondaryColor">
+        <div class="main">
+            <h3 style="text-align: center;">Get In Touch</h3>
+
+            <div id="contact__alert" class="contact__alert"></div>
+
+            <form id="ajax-contact" class="contact__form border shadow" action="./php/contact.php" method="POST">
+                <label for="name">Your Name</label>
+                <input id="name" class="contact__input border" type="text" name="name">
+
+                <label for="email">Email</label>
+                <input id="email" class="contact__input border" type="email" name="email">
+
+                <label for="message">Message</label>
+                <textarea id="message" class="contact__input" name="message"></textarea>
+
+                <input class="contact__btn" type="submit" name="submit" value="Send">
+            </form>
+
         </div>
+    </section>
 
-        <script src="./js/script.js"></script>
-        <script src="./js/contact-form.js"></script>
+    <div class="back-to-top">
+        <i class="fas fa-angle-up"></i>
+    </div>
 
-    </body>
+    <div class="footer">
+        <div class="footer__copyright">©2020 Matthew Woodley</div>
+        <a class="footer__email" href="mailto:contact@mattwoodley.net"><i class="fas fa-envelope"></i></a>
+        <a class="footer__github" target="_blank" href="https://github.com/mattwoodley"><i
+                class="fab fa-github"></i></a>
+        <a class="footer__linkedin" target="_blank" href="https://www.linkedin.com/in/mattwoodley17/"><i
+                class="fab fa-linkedin"></i></a>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/contact-form.js"></script>
+
+</body>
 
 </html>
